@@ -1,0 +1,9 @@
+using UnityEngine;
+
+namespace ParaPejuang.WanderingChef
+{
+    public class #SCRIPTNAME# : MonoBehaviour
+    {
+        #NOTRIM#
+    }
+}
