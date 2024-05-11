@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.ondrejnepozitek.edgar.unity": {
+      "version": "https://github.com/OndrejNepozitek/Edgar-Unity.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "173a6319fe5b0460c86c3a5af40134f3355739f6"
+    },
     "com.unity.2d.animation": {
       "version": "7.1.0",
       "depth": 1,
