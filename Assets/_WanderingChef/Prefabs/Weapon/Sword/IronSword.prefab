@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a557e2b93323f4831a62221b200348c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponName: IronSword
+  WeaponName: IronSword1
   WeaponCurrentlyActive: 1
   InputAuthorized: 1
   TriggerMode: 0
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a557e2b93323f4831a62221b200348c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponName: IronSword
+  WeaponName: IronSword2
   WeaponCurrentlyActive: 1
   InputAuthorized: 1
   TriggerMode: 0
@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a557e2b93323f4831a62221b200348c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponName: IronSword
+  WeaponName: IronSword3
   WeaponCurrentlyActive: 1
   InputAuthorized: 1
   TriggerMode: 0
