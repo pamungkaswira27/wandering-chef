@@ -4,6 +4,7 @@ using MoreMountains.Tools;
 using System.Collections.Generic;
 using System;
 using Random = UnityEngine.Random;
+using ParaPejuang.WanderingChef;
 
 namespace MoreMountains.TopDownEngine
 {
@@ -211,6 +212,11 @@ namespace MoreMountains.TopDownEngine
 					}
 				}
 			}            
+
+			if (CharacterType == CharacterTypes.Player)
+			{
+				PlayerManager.Instance.SetupPlayer(this);
+			}
 		}
 		
 		/// <summary>

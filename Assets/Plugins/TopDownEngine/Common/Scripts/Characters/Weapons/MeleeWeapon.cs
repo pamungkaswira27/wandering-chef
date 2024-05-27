@@ -3,6 +3,7 @@ using System.Collections;
 using MoreMountains.Tools;
 using MoreMountains.Feedbacks;
 using UnityEngine.Serialization;
+using ParaPejuang.WanderingChef;
 
 namespace MoreMountains.TopDownEngine
 {
@@ -115,7 +116,9 @@ namespace MoreMountains.TopDownEngine
 			if (Owner != null)
 			{
 				_damageOnTouch.Owner = Owner.gameObject;
-			}            
+			}
+
+			SetWeaponDamage();
 		}
 
 		/// <summary>
@@ -266,6 +269,17 @@ namespace MoreMountains.TopDownEngine
 				_damageAreaCollider.enabled = false;
 			}
 		}
+
+        /// <summary>
+        /// Set weapon damage based on Player Attribute
+        /// </summary>
+        protected virtual void SetWeaponDamage()
+		{
+			PlayerAttribute playerAttribute = PlayerManager.Instance.PlayerAttribute;
+
+			MinDamageCaused = playerAttribute.AttackPoints;
+			MaxDamageCaused = playerAttribute.AttackPoints;
+        }
 
 		/// <summary>
 		/// When selected, we draw a bunch of gizmos
