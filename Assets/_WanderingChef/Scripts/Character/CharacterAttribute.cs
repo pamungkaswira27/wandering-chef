@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ParaPejuang.WanderingChef
 {
-    public class PlayerAttribute : MonoBehaviour
+    public class CharacterAttribute : MonoBehaviour
     {
         [Header("Attributes")]
         [SerializeField]

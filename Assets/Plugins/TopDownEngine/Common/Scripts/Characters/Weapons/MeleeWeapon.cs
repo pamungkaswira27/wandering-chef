@@ -274,17 +274,17 @@ namespace MoreMountains.TopDownEngine
         /// Set weapon damage based on Player Attribute
         /// </summary>
         protected virtual void SetWeaponDamage()
-		{
-			PlayerAttribute playerAttribute = PlayerManager.Instance.PlayerAttribute;
+        {
+			CharacterAttribute characterAttribute = GetComponentInParent<CharacterAttribute>();
 
-			MinDamageCaused = playerAttribute.AttackPoints;
-			MaxDamageCaused = playerAttribute.AttackPoints;
+            MinDamageCaused = characterAttribute.AttackPoints;
+            MaxDamageCaused = characterAttribute.AttackPoints;
         }
 
-		/// <summary>
-		/// When selected, we draw a bunch of gizmos
-		/// </summary>
-		protected virtual void OnDrawGizmosSelected()
+        /// <summary>
+        /// When selected, we draw a bunch of gizmos
+        /// </summary>
+        protected virtual void OnDrawGizmosSelected()
 		{
 			if (!Application.isPlaying)
 			{
