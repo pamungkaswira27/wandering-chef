@@ -108,7 +108,9 @@ namespace MoreMountains.TopDownEngine
 		{
 			base.Initialization();
 
-			if (_damageArea == null)
+            SetWeaponDamage();
+
+            if (_damageArea == null)
 			{
 				CreateDamageArea();
 				DisableDamageArea();
@@ -117,8 +119,6 @@ namespace MoreMountains.TopDownEngine
 			{
 				_damageOnTouch.Owner = Owner.gameObject;
 			}
-
-			SetWeaponDamage();
 		}
 
 		/// <summary>

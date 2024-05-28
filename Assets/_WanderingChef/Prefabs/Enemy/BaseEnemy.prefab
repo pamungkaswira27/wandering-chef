@@ -452,7 +452,8 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  InitialWeapon: {fileID: 0}
+  InitialWeapon: {fileID: 2245733795314108392, guid: fe7ea7de329b23c47b980d0b5b3774c6,
+    type: 3}
   CanPickupWeapons: 0
   WeaponUseFeedback: {fileID: 0}
   WeaponAttachment: {fileID: 2750943164780706919}
@@ -636,7 +637,7 @@ MonoBehaviour:
   InitializationMode: 0
   Label: ChaseTarget
   UseMinimumXDistance: 1
-  MinimumXDistance: 3
+  MinimumXDistance: 1
 --- !u!114 &-3875535341068941709
 MonoBehaviour:
   m_ObjectHideFlags: 0

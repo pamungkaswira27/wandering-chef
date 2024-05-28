@@ -31,7 +31,7 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialWeapon
       value: 
-      objectReference: {fileID: 2245733795314108392, guid: fe7ea7de329b23c47b980d0b5b3774c6,
+      objectReference: {fileID: 5520445064851945332, guid: 8575844fd2cb1e54abc19f3fa4d03a2f,
         type: 3}
     - target: {fileID: 2750943165908354779, guid: 659d7ff73c56e6c42adee586f910e6e4,
         type: 3}

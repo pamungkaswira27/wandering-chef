@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7483831394989944917}
   - component: {fileID: 2245733795314108392}
   m_Layer: 0
-  m_Name: SlimeMeleeAttack
+  m_Name: BaseEnemyMeleeAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,9 +81,9 @@ MonoBehaviour:
   WeaponCurrentlyActive: 1
   InputAuthorized: 1
   TriggerMode: 1
-  DelayBeforeUse: 0.5
+  DelayBeforeUse: 0
   DelayBeforeUseReleaseInterruption: 0
-  TimeBetweenUses: 2
+  TimeBetweenUses: 0
   TimeBetweenUsesReleaseInterruption: 0
   UseBurstMode: 0
   BurstLength: 3
@@ -151,8 +151,8 @@ MonoBehaviour:
   TargetLayerMask:
     serializedVersion: 2
     m_Bits: 1024
-  MinDamageCaused: 10
-  MaxDamageCaused: 10
+  MinDamageCaused: 0
+  MaxDamageCaused: 0
   Knockback: 0
   KnockbackForce: {x: 10, y: 2, z: 0}
   KnockbackDirection: 0
