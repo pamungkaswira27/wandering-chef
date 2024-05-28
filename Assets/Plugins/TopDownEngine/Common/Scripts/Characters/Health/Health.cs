@@ -195,6 +195,8 @@ namespace MoreMountains.TopDownEngine
 		protected MaterialPropertyBlock _propertyBlock;
 		protected bool _hasColorProperty = false;
 
+		private CharacterAttribute _characterAttribute;
+
 		protected class InterruptiblesDamageOverTimeCoroutine
 		{
 			public Coroutine DamageOverTimeCoroutine;
@@ -288,6 +290,8 @@ namespace MoreMountains.TopDownEngine
 			_characterController = this.gameObject.GetComponentInParent<CharacterController>();
 			_collider2D = this.gameObject.GetComponentInParent<Collider2D>();
 			_collider3D = this.gameObject.GetComponentInParent<Collider>();
+
+			_characterAttribute = GetComponent<CharacterAttribute>();
 
 			DamageMMFeedbacks?.Initialization(this.gameObject);
 			DeathMMFeedbacks?.Initialization(this.gameObject);
@@ -630,7 +634,8 @@ namespace MoreMountains.TopDownEngine
 			}
 			else
 			{
-				totalDamage = damage;
+				totalDamage = damage * ((_characterAttribute.DefensePoints + 100) / 100);
+
 				if (typedDamages != null)
 				{
 					foreach (TypedDamage typedDamage in typedDamages)
@@ -966,10 +971,8 @@ namespace MoreMountains.TopDownEngine
         /// </summary>
         protected virtual void SetCharacterHealth()
         {
-			CharacterAttribute characterAttribute = GetComponent<CharacterAttribute>();
-
-            InitialHealth = characterAttribute.HealthPoints;
-			MaximumHealth = characterAttribute.HealthPoints;
+            InitialHealth = _characterAttribute.HealthPoints;
+			MaximumHealth = _characterAttribute.HealthPoints;
         }
 
 
