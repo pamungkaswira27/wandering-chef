@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db77223fbffbd78429260b38e6070e6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthPoints: 50
+  _healthPoints: 0
   _attackPoints: 0
   _defensePoints: 0
 --- !u!50 &2750943165908354781
@@ -636,7 +636,7 @@ MonoBehaviour:
   InitializationMode: 0
   Label: ChaseTarget
   UseMinimumXDistance: 1
-  MinimumXDistance: 1
+  MinimumXDistance: 3
 --- !u!114 &-3875535341068941709
 MonoBehaviour:
   m_ObjectHideFlags: 0
