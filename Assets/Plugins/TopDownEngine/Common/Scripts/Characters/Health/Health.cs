@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using MoreMountains.Tools;
 using MoreMountains.Feedbacks;
+using ParaPejuang.WanderingChef;
 
 namespace MoreMountains.TopDownEngine
 {
@@ -295,6 +296,8 @@ namespace MoreMountains.TopDownEngine
 			_initialized = true;
 			
 			DamageEnabled();
+
+			SetCharacterHealth();
 		}
 		
 		/// <summary>
@@ -956,14 +959,25 @@ namespace MoreMountains.TopDownEngine
 			}
 		}
 
-		#region HealthManipulationAPIs
-		
+        #region HealthManipulationAPIs
 
-		/// <summary>
-		/// Sets the current health to the specified new value, and updates the health bar
-		/// </summary>
-		/// <param name="newValue"></param>
-		public virtual void SetHealth(float newValue)
+        /// <summary>
+        /// Set character health based on Player Attribute
+        /// </summary>
+        protected virtual void SetCharacterHealth()
+        {
+			CharacterAttribute characterAttribute = GetComponent<CharacterAttribute>();
+
+            InitialHealth = characterAttribute.HealthPoints;
+			MaximumHealth = characterAttribute.HealthPoints;
+        }
+
+
+        /// <summary>
+        /// Sets the current health to the specified new value, and updates the health bar
+        /// </summary>
+        /// <param name="newValue"></param>
+        public virtual void SetHealth(float newValue)
 		{
 			CurrentHealth = newValue;
 			UpdateHealthBar(false);

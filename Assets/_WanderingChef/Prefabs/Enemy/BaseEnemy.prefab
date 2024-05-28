@@ -148,6 +148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2750943165908354779}
   - component: {fileID: 2750943165908354780}
+  - component: {fileID: 294343944320342350}
   - component: {fileID: 2750943165908354781}
   - component: {fileID: 2750943165908354778}
   - component: {fileID: 2750943165908354782}
@@ -216,6 +217,21 @@ MonoBehaviour:
   AdditionalAbilityNodes: []
   CharacterBrain: {fileID: 2750943165908354776}
   OptimizeForMobile: 1
+--- !u!114 &294343944320342350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2750943165908354775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db77223fbffbd78429260b38e6070e6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthPoints: 50
+  _attackPoints: 0
+  _defensePoints: 0
 --- !u!50 &2750943165908354781
 Rigidbody2D:
   serializedVersion: 4
