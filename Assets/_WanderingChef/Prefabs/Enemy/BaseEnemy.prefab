@@ -554,7 +554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitializationMode: 0
-  Label: 
+  Label: DoNothing
 --- !u!114 &-4999833917272537871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -568,7 +568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitializationMode: 0
-  Label: 
+  Label: ResetTarget
 --- !u!114 &-7994590951306953969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,7 +581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53f4ea5f678a28a42ae15e30e472a3ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Label: 
+  Label: IsTargetNull
 --- !u!114 &1279915378092184652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,7 +594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f21b170839d044b8b9bf160d1be05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Label: 
+  Label: IsTargetAlive
 --- !u!114 &4483836560034348575
 MonoBehaviour:
   m_ObjectHideFlags: 0
