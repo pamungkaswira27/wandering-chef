@@ -962,7 +962,7 @@ namespace MoreMountains.TopDownEngine
         #region HealthManipulationAPIs
 
         /// <summary>
-        /// Set character health based on Player Attribute
+        /// Set character health based on Character Attribute
         /// </summary>
         protected virtual void SetCharacterHealth()
         {

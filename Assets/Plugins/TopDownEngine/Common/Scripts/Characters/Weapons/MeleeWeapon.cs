@@ -271,7 +271,7 @@ namespace MoreMountains.TopDownEngine
 		}
 
         /// <summary>
-        /// Set weapon damage based on Player Attribute
+        /// Set weapon damage based on Character Attribute
         /// </summary>
         protected virtual void SetWeaponDamage()
         {
