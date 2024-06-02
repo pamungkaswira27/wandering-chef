@@ -567,14 +567,19 @@ namespace MoreMountains.TopDownEngine
 		/// <param name="interruptible"></param>
 		public virtual void DamageOverTime(float damage, GameObject instigator, float flickerDuration,
 			float invincibilityDuration, Vector3 damageDirection, List<TypedDamage> typedDamages = null,
-			int amountOfRepeats = 0, float durationBetweenRepeats = 1f, bool interruptible = true, DamageType damageType = null)
+			int amountOfRepeats = 0, float durationBetweenRepeats = 1f, bool interruptible = true, DamageType damageType = null, bool ignoreDef = false)
 		{
 			if (ComputeDamageOutput(damage, typedDamages, false) == 0)
 			{
 				return;
 			}
-			
-			InterruptiblesDamageOverTimeCoroutine damageOverTime = new InterruptiblesDamageOverTimeCoroutine();
+
+			if (!ignoreDef)
+			{
+                damage = damage * (100 / (_characterAttribute.DefensePoints + 100));
+            }
+
+            InterruptiblesDamageOverTimeCoroutine damageOverTime = new InterruptiblesDamageOverTimeCoroutine();
 			damageOverTime.DamageOverTimeType = damageType;
 			damageOverTime.DamageOverTimeCoroutine = StartCoroutine(DamageOverTimeCo(damage, instigator, flickerDuration,
 				invincibilityDuration, damageDirection, typedDamages, amountOfRepeats, durationBetweenRepeats,
@@ -607,6 +612,7 @@ namespace MoreMountains.TopDownEngine
 			for (int i = 0; i < amountOfRepeats; i++)
 			{
 				Damage(damage, instigator, flickerDuration, invincibilityDuration, damageDirection, typedDamages);
+				Debug.Log("Damage ke-" + i + " " + damage);
 				yield return MMCoroutine.WaitFor(durationBetweenRepeats);
 			}
 		}
@@ -634,7 +640,7 @@ namespace MoreMountains.TopDownEngine
 			}
 			else
 			{
-				totalDamage = damage * ((_characterAttribute.DefensePoints + 100) / 100);
+				totalDamage = damage * (100 / (_characterAttribute.DefensePoints + 100));
 
 				if (typedDamages != null)
 				{

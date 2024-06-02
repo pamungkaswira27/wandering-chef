@@ -6,6 +6,7 @@ using System;
 using MoreMountains.Feedbacks;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
+using ParaPejuang.WanderingChef;
 
 namespace MoreMountains.TopDownEngine
 {
@@ -657,9 +658,18 @@ namespace MoreMountains.TopDownEngine
 
 				if (RepeatDamageOverTime)
 				{
-					_colliderHealth.DamageOverTime(randomDamage, gameObject, InvincibilityDuration,
-						InvincibilityDuration, _damageDirection, TypedDamages, AmountOfRepeats, DurationBetweenRepeats,
-						DamageOverTimeInterruptible, RepeatedDamageType);
+					if (TryGetComponent(out DamageOverTimeModifier damageOverTimeModifier))
+					{
+						switch (damageOverTimeModifier.DamageBasedOn)
+						{
+							case DamageOverTimeModifier.BaseDamage.HealthPercentage:
+                                randomDamage = _colliderHealth.MaximumHealth * damageOverTimeModifier.GetHealthPercentage();
+                                _colliderHealth.DamageOverTime(randomDamage, gameObject, InvincibilityDuration,
+									InvincibilityDuration, _damageDirection, TypedDamages, AmountOfRepeats, DurationBetweenRepeats,
+									DamageOverTimeInterruptible, RepeatedDamageType, true);
+                                break;
+                        }
+					}
 				}
 				else
 				{
