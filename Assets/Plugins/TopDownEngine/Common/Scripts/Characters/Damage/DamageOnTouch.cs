@@ -176,7 +176,7 @@ namespace MoreMountains.TopDownEngine
 		// storage		
 		protected Vector3 _lastPosition, _lastDamagePosition, _velocity, _knockbackForce, _damageDirection;
 		protected float _startTime = 0f;
-		protected Health _colliderHealth;
+        protected Health _colliderHealth;
 		protected TopDownController _topDownController;
 		protected TopDownController _colliderTopDownController;
 		protected List<GameObject> _ignoredGameObjects;
@@ -666,14 +666,25 @@ namespace MoreMountains.TopDownEngine
                                 randomDamage = _colliderHealth.MaximumHealth * damageOverTimeModifier.GetHealthPercentage();
                                 _colliderHealth.DamageOverTime(randomDamage, gameObject, InvincibilityDuration,
 									InvincibilityDuration, _damageDirection, TypedDamages, AmountOfRepeats, DurationBetweenRepeats,
-									DamageOverTimeInterruptible, RepeatedDamageType, true);
+									DamageOverTimeInterruptible, RepeatedDamageType);
                                 break;
                         }
 					}
 				}
 				else
 				{
-					_colliderHealth.Damage(randomDamage, gameObject, InvincibilityDuration, InvincibilityDuration,
+                    if (_colliderHealth.TryGetComponent(out CharacterAttribute characterAttribute))
+                    {
+                        randomDamage = randomDamage * (100 / (characterAttribute.DefensePoints + 100));
+                    }
+
+					if (TryGetComponent(out StackableBonusModifier stackableBonusModifier))
+					{
+						randomDamage += randomDamage * stackableBonusModifier.GetTotalBonusDamagePercentage();
+						stackableBonusModifier.IncreaseStackSize();
+					}
+
+                    _colliderHealth.Damage(randomDamage, gameObject, InvincibilityDuration, InvincibilityDuration,
 						_damageDirection, TypedDamages);
 				}
 			}
