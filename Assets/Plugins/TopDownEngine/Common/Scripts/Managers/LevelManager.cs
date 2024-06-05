@@ -144,6 +144,7 @@ namespace MoreMountains.TopDownEngine
 			}
 
 			BoundsCollider = _collider;
+			SetInitialSpawnPoint();
 			InstantiatePlayableCharacters();
 
 			if (UseLevelBounds)
@@ -186,10 +187,18 @@ namespace MoreMountains.TopDownEngine
 			MMGameEvent.Trigger("CameraBound");
 		}
 
-		/// <summary>
-		/// A method meant to be overridden by each multiplayer level manager to describe how to spawn characters
-		/// </summary>
-		protected virtual void SpawnMultipleCharacters()
+        /// <summary>
+        /// Find player initial spawn point
+        /// </summary>
+        protected virtual void SetInitialSpawnPoint()
+        {
+			InitialSpawnPoint = FindObjectOfType<CheckPoint>();
+        }
+
+        /// <summary>
+        /// A method meant to be overridden by each multiplayer level manager to describe how to spawn characters
+        /// </summary>
+        protected virtual void SpawnMultipleCharacters()
 		{
 
 		}
