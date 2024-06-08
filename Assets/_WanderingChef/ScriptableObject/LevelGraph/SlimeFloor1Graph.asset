@@ -26,7 +26,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8400baee4cafd34091c865089a167b2, type: 3}
-  m_Name: DungeonLevelGraph
+  m_Name: SlimeFloor1Graph
   m_EditorClassIdentifier: 
   Connections:
   - {fileID: 4330829584206537752}
@@ -39,7 +39,10 @@ MonoBehaviour:
   - {fileID: 3772127281831381437, guid: a1c214e72233bb84ebe8670a30e53568, type: 3}
   CorridorRoomTemplateSets: []
   DefaultIndividualRoomTemplates:
-  - {fileID: 6692561008080731695, guid: 89b6bed6b39326b4992811f7e9e99de3, type: 3}
+  - {fileID: 5598007682762446070, guid: c8964b43f0c753a4aadf8ff70270df39, type: 3}
+  - {fileID: 5598007682762446070, guid: 4f4b68b5bf51f3643af05671917e7953, type: 3}
+  - {fileID: 5598007682762446070, guid: f57b4b3153b4d7045ab491217d1b662c, type: 3}
+  - {fileID: 5598007682762446070, guid: 352022b4310fef64b91a6b94835c6a4b, type: 3}
   DefaultRoomTemplateSets: []
   Rooms:
   - {fileID: 2397530288427272515}
