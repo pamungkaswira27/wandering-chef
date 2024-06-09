@@ -1485,6 +1485,7 @@ GameObject:
   - component: {fileID: 3633101718070595839}
   - component: {fileID: 2362561927844297470}
   - component: {fileID: 4427227392592062178}
+  - component: {fileID: 6913720578299661594}
   m_Layer: 0
   m_Name: FloorVariant_1
   m_TagString: Untagged
@@ -1566,6 +1567,19 @@ MonoBehaviour:
       Margin1: 1
       Margin2: 1
       Enabled: 1
+--- !u!114 &6913720578299661594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6692561008080731695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bc96cd90d53f5c42bf701b0ab8cc277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemies: []
 --- !u!1 &7376625976827823845
 GameObject:
   m_ObjectHideFlags: 0

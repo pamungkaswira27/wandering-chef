@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Position: {x: 320, y: -32}
-  Name: EliteFloor
+  Name: Floor
   IndividualRoomTemplates: []
   RoomTemplateSets: []
 --- !u!114 &11400000
@@ -26,7 +26,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8400baee4cafd34091c865089a167b2, type: 3}
-  m_Name: SlimeFloor1Graph
+  m_Name: SlimeFloor1_4Graph
   m_EditorClassIdentifier: 
   Connections:
   - {fileID: 4330829584206537752}
@@ -52,8 +52,8 @@ MonoBehaviour:
   - {fileID: -1666525727998734046}
   - {fileID: 2113784760783347996}
   EditorData:
-    PanOffset: {x: 130.79163, y: 44.03099}
-    Zoom: 0.960596
+    PanOffset: {x: 463.98056, y: 280.34848}
+    Zoom: 0.63024706
   RoomType: Edgar.Unity.Room
   ConnectionType: Edgar.Unity.Connection
 --- !u!114 &1270438674342269210
